@@ -15,59 +15,125 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- Scripts -->
         <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+        <script src="scripts.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD8pBs9F5MBLTtSRSuVX8dE-_MOqJ0q3_Y",
+            authDomain: "personalwebsite-b10e5.firebaseapp.com",
+            databaseURL: "https://personalwebsite-b10e5.firebaseio.com",
+            projectId: "personalwebsite-b10e5",
+            storageBucket: "personalwebsite-b10e5.appspot.com",
+            messagingSenderId: "548485342346",
+            appId: "1:548485342346:web:24e607225a6b4dd9773973",
+            measurementId: "G-1XYHHKWHPP"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
         
         <!-- Favicons -->
         <!-- Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149698593-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-149698593-1');
+        </script>
+
         <!-- Stylesheet -->
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body>
-        <div class="container">
-                
-            <div class="box">
-                <div>
-                    <!-- Picture -->
-                    <img src="profile.jpg" alt="" class="box-img">
-                </div>
-
-                <div>
-                    <!-- Title & Description -->
-                    <h1>~Anthony~</h1>
-                    <h5>Computer Science Student</h5>
-                    <p>
-                        Insert generic description here </br>
-                        WIP version 2 website: Started 10/8
-                    </p>
-                </div>
-
-                <div class="boxnav" id="boxnav">
-                    <!-- Navbar -->
-                    
-                </div>
-
-                <div>
-                    <!-- Social media link boxes -->
-                    <ul>
-                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                    </ul>
+        <div class="container"> 
+            <div class="hideable" id="home">
+                <div class="box">
+                    <div>
+                        <img src="profile.jpg" alt="" class="box-img">
+                        <!-- Title & Description -->
+                        <h1>Anthony Martinez</h1>
+                        <h5>Computer Science Student</h5>
+                        <p>
+                            Insert generic description here </br>
+                            WIP version 2 website: Started 10/8
+                        </p>
+                    </div>
+    
+                    <div class="boxnav" id="boxnav">
+                        <!-- Navbar -->
+                        <nav>
+                            <ul>
+                                <li><a href="#" onclick="showhide('education');">Education</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="socialMediaNav">
+                        <!-- Social media link boxes -->
+                        <ul>
+                        <!-- <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li> -->
+                        <li><a href="https://twitter.com/tony_m06"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                        <li><a href="https://linkedin.com/in/amartinez21/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa fa-medium"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div>
                 <!-- Link to Photography -->
             </div>
-            <div id="education" hidden>
+            <div id="education" class="hideable" style="display: none;">
                 <!-- Education -->
-                <img src="files/USC.png" alt="">
+                <div class="box">
+                    <h1>Education</h1></br>
+                    <div>
+                        <img src="files/USC.png" alt="" class="box-img-school">
+                        <p class="boxEducationP">
+                            M.S. Computer Science, </br>
+                            Expected May 2021 </br>
+                        </p>
+                    </div>
+                    <div>
+                        <img src="files/USC.png" alt="" class="box-img-school">
+                        <p class="boxEducationP">
+                            B.S. Computer Science, </br>
+                            Expected May 2020 </br>
+                        </p>
+                    </div>
+                    </br>
+                    <div class="boxnav" id="boxnavEducation">
+                        <!-- Navbar -->
+                        <nav>
+                            <ul>
+                                <li><a href="#" onclick="showhide('home');">Home</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    </br>
+                </div>
             </div>
         </div>
         <footer class="footer">
             <!-- <p>Find me on social media!</p>
             <a href="#"><i class="fa fa-facebook-square"></i></a>
             <a href="#"><i class="fa fa-linkedin-square"></i></a> -->
-            <p>&copy; 2019 Anthony Martinez (anthonymartinez.co)</p>
+            <div class="boxFooter">
+                <p>&copy; 2019 Anthony Martinez (anthonymartinez.co)</p>
+            </div>
         </footer>
     </body>
 </html>

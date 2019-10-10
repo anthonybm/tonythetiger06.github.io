@@ -1,7 +1,8 @@
+
 footer {
     height: 100px;
     color: white;
-    font-family: 'Century Gothic', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     padding: 20px;
     transition: all ease-in-out 250ms;
@@ -17,20 +18,23 @@ body, html{
   margin: 0;
   padding: 0;
   background: url(bg.jpg) no-repeat;
+  /* background-color: #fafafa;
+  color: #212121; */
   background-size: cover;
   background-position:center;
   height: 100%;
   min-height: 100%;
 }
 .box{
-  width: 450px;
+  min-width: 450px;
+  max-width: 550px;
   background: rgba(0, 0, 0, 0.4);
   padding: 40px;
-  text-align: center;
+  /* text-align: center; */
   margin: auto;
   margin-top: 5%;
   color: white;
-  font-family: 'Century Gothic',sans-serif;
+  font-family: "Lato",Helvetica,sans-serif;
 }
 .box-img{
   /* border-radius: 50%;
@@ -38,19 +42,44 @@ body, html{
   height: 200px; */
   max-width: 100%;
   max-height: 100%;
+  width: 100%;
+  border-radius: .1%;
+  text-align: center;
+}
+.box-img-school{
+  max-width: 100%;
+  max-height: 100%;
+  width: 50%;
+  min-height: 100%;
+  border-radius: 2%;
+  float: left;
 }
 .box h1{
+  text-align: center;
   font-size: 40px;
+  font-weight: 500;
   letter-spacing: 4px;
-  font-weight: 100;
+  font-family: "Roboto";
 }
 .box h5{
+  text-align: center;
   font-size: 20px;
   letter-spacing: 3px;
-  font-weight: 100;
+  font-family: "Lato",Helvetica,sans-serif;
 }
 .box p{
-  text-align: justify;
+  text-align: center;
+}
+.boxFooter{
+  width: auto;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.1);
+  /* padding: 10px; */
+  /* text-align: center; */
+  margin: auto;
+  /* margin-top: 5%; */
+  color: white;
+  font-family: "Lato",Helvetica,sans-serif;
 }
 ul{
   margin: 0;
@@ -69,4 +98,21 @@ ul{
 }
 .box li a:hover{
   color: #b9b9b9;
+}
+
+.boxnav nav ul li a{
+  font-size: 25px;
+  border-radius: 12px;
+  color: #d1d1d1;
+}
+
+.boxnav {
+  text-align: center;
+}
+.socialMediaNav {
+  text-align: center;
+}
+
+.boxEducationP {
+  text-align: right;
 }
