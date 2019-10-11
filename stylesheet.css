@@ -17,7 +17,7 @@ footer {
 body, html{
   margin: 0;
   padding: 0;
-  background: url(bg4.jpg) no-repeat;
+  background: url(/assets/backgrounds/bg4.jpg) no-repeat;
   /* background-color: #fafafa;
   color: #212121; */
   background-size: cover;
